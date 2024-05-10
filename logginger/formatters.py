@@ -69,8 +69,7 @@ class ColorizedFormatter(Formatter):
 
 
 class DefaultFormatter(ColorizedFormatter):
-    def should_use_colors(self) -> bool:
-        return sys.stderr.isatty()  # pragma: no cover
+    pass
 
 
 class NoStacktraceFormatter(ColorizedFormatter):
@@ -83,11 +82,6 @@ class NoStacktraceFormatter(ColorizedFormatter):
     def formatException(self, ei):
         return None
 
-    def format(self, record: LogRecord):
-        # Work-around for https://bugs.python.org/issue29056
-        saved_exc_text = record.exc_text
+    def formatMessage(self, record: LogRecord) -> str:
         record.exc_text = None
-        try:
-            return super(NoStacktraceFormatter, self).format(record)
-        finally:
-            record.exc_text = saved_exc_text
+        return super().formatMessage(record)
