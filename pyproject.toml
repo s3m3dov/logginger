@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "logginger"
-version = "0.0.2"
+version = "0.0.4"
 description = "Logginger is a simple logging library that includes tools to extend the logging module."
 authors = ["Hikmat Samadov <hikmat@cublya.com>"]
 readme = "README.md"
