@@ -4,7 +4,7 @@ from platform import python_version
 
 from logginger.fmts import DEFAULT_FMT
 from logginger.formatters import NoStacktraceFormatter, DefaultFormatter
-from logginger.handlers.slack import SlackLogHandler
+from logginger.slack import SlackLogHandler
 from logginger.utils import add_handlers
 from logginger.uvicorn import ColorizedFormatter
 
