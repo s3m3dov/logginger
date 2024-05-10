@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "logginger"
+version = "0.0.1"
+description = "Logginger is a simple logging library that includes tools to extend the logging module."
+authors = ["Hikmat Samadov <hikmat@cublya.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+six = "^1.16.0"
+slack-sdk = "^3.27.1"
+
+[tool.poetry.dev-dependencies]
+black = "^24.4.0"
+pytest = "^8.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
