@@ -32,7 +32,7 @@ class SlackLogFilter(Filter):
         `logger.info("...", extra={'notify_slack': True})`
     """
 
-    def filter(self, record):
+    def filter(self, record: LogRecord):
         return getattr(record, "notify_slack", False)
 
 
